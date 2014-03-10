@@ -8,6 +8,7 @@ package fr.ekb.production;
 
 import fr.ekb.Observer.Observable;
 import fr.ekb.Observer.Observer;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +16,8 @@ import fr.ekb.Observer.Observer;
  */
 public class ArrayPlanning implements Observable,Observer{
 
+    private ArrayList<Planning> list;
+    
     @Override
     public void addObserver(Observer obs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -33,6 +36,18 @@ public class ArrayPlanning implements Observable,Observer{
     @Override
     public void update() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public void ajouterPlanning(Planning planning)
+    {
+        list.add(planning);
+    }
+    public boolean retirerPlanning(Planning planning)
+    {
+        boolean b;
+        b=false;
+        if(list.remove(planning))
+            return b=true;
+        return b;
     }
     
 }
