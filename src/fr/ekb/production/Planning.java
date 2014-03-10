@@ -6,6 +6,8 @@
 
 package fr.ekb.production;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author abdoulaziz
@@ -21,6 +23,39 @@ public class Planning {
         this.indexRouge=indexRouge;
         this.indexVert=indexVert;
         this.nbKanban=nbKanban;
+    }
+
+    public int getIndexBleu() {
+        return indexBleu;
+    }
+    
+
+    public int getIndexRouge() {
+        return indexRouge;
+    }
+
+    public int getIndexVert() {
+        return indexVert;
+    }
+
+    public int getNbKanban() {
+        return nbKanban;
+    }
+
+    public void setIndexBleu(int indexBleu) {
+        this.indexBleu = indexBleu;
+    }
+
+    public void setIndexRouge(int indexRouge) {
+        this.indexRouge = indexRouge;
+    }
+
+    public void setIndexVert(int indexVert) {
+        this.indexVert = indexVert;
+    }
+
+    public void setNbKanban(int nbKanban) {
+        this.nbKanban = nbKanban;
     }
     
     
