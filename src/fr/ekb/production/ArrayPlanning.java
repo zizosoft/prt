@@ -49,5 +49,13 @@ public class ArrayPlanning implements Observable,Observer{
             return b=true;
         return b;
     }
+
+    public ArrayList<Planning> getList(){
+        return list;
+    }
+
+    public void setList(ArrayList<Planning> list) {
+        this.list = list;
+    }
     
 }

@@ -6,7 +6,7 @@
 
 package fr.ekb.production;
 
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -17,12 +17,14 @@ public class Planning {
     int indexRouge;
     int indexVert;
     int nbKanban;
-    Planning(int indexBleu, int indexRouge, int indexVert,int nbKanban )
+    int dureeProduction;
+    Planning(int indexBleu, int indexRouge, int indexVert,int nbKanban,int dureeProduction )
     {
         this.indexBleu=indexBleu;
         this.indexRouge=indexRouge;
         this.indexVert=indexVert;
         this.nbKanban=nbKanban;
+        this.dureeProduction=dureeProduction;
     }
 
     public int getIndexBleu() {
@@ -44,6 +46,14 @@ public class Planning {
 
     public void setIndexBleu(int indexBleu) {
         this.indexBleu = indexBleu;
+    }
+
+    public int getDureeProduction() {
+        return dureeProduction;
+    }
+
+    public void setDureeProduction(int dureeProduction) {
+        this.dureeProduction = dureeProduction;
     }
 
     public void setIndexRouge(int indexRouge) {

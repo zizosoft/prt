@@ -4,13 +4,17 @@
  * and open the template in the editor.
  */
 
-package fr.ekb.Observer;
+package fr.ekb.production.State;
 
 /**
  *
  * @author abdoulaziz
  */
-public interface Observer {
-    public void update();
+public interface AbstractState {
     
+    public void messageOperateur();
+    public void messageShuttleManager();
+    public AbstractState etatSuivant();
 }
+
+    

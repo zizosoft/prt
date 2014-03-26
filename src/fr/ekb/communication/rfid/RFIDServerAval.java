@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package fr.ekb.Observer;
+package fr.ekb.communication.rfid;
 
 /**
  *
  * @author abdoulaziz
  */
-public interface Observer {
-    public void update();
+public class RFIDServerAval {
+    
     
 }

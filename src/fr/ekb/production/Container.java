@@ -6,23 +6,27 @@
 
 package fr.ekb.production;
 
+import fr.ekb.production.State.AbstractState;
+
 /**
  *
  * @author abdoulaziz
  */
-public class Container {
+public class Container 
+{
     String IDContainer;
     String nomproduit;
     String posteAmont;
     String posteAval;
     AbstractState etat;
-    Container(String IDContainer, String nomproduit, String posteAmont, String posteAval, AbstractState etat)
+    public Container(String IDContainer, String nomproduit, String posteAmont, String posteAval, AbstractState etat)
     {
         this.IDContainer=IDContainer;
         this.nomproduit=nomproduit;
         this.posteAmont=posteAmont;
         this.posteAval=posteAval;
-        this.etat=etat;    
+        this.etat=etat;  
+        run();
     }
     String getIDContainer()
     {
@@ -44,5 +48,18 @@ public class Container {
     AbstractState getEtat()
     {
         return etat;
+    }
+    public void run()
+    {
+        while(true)
+        {
+            etat=etat.etatSuivant();
+            etat.messageOperateur();
+        }
+        
+    }
+    public static void main(String args)
+    {
+        
     }
 }

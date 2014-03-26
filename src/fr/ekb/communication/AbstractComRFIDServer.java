@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
-package fr.ekb.Observer;
+package fr.ekb.communication;
 
 /**
  *
  * @author abdoulaziz
  */
-public interface Observer {
-    public void update();
-    
+public interface AbstractComRFIDServer 
+{
+   public String read();
+   public void write(String ligne);
 }
+
